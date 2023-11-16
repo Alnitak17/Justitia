@@ -23,9 +23,6 @@ class Quiz extends Model
      */
     protected $fillable = [
         'id',
-        'title',
-        'body',
-        'photo',
-        'quiz_id',
+        'name'
     ];
 }

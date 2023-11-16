@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', [AdminController::class, 'show']);
+Route::get('/adminquiz', [AdminController::class, 'showQuiz']);

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Quiz;
 use App\Models\Question;
+use App\Models\Answer;
 
 class AdminController extends Controller
 {
@@ -28,9 +29,21 @@ class AdminController extends Controller
                         ->orderby('id')
                         ->get();
 
+        $answers = Answer::where('id', '>=', 0)
+                        ->orderby('id')
+                        ->get();
 
+        return view('adminquiz')->with('quizzes', $quizzes);
+    }
 
+    public function createQuiz() {
 
-        return view('admin');
+    }
+    public function deleteQuiz() {
+        $id;
+
+        $deleted = Quiz::where('id', '=', $id)->delete();
+
+        return response()->json(['success'=>'Row has been deleted']);
     }
 }
