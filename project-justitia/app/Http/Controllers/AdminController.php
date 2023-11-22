@@ -38,12 +38,22 @@ class AdminController extends Controller
 
     public function createQuiz() {
 
+        Quiz::create([
+            "name"=> $request->input('name')
+        ]);
+
+        return response()->json(['success'=>'Quiz created']);
     }
+
     public function deleteQuiz() {
         $id;
 
         $deleted = Quiz::where('id', '=', $id)->delete();
 
         return response()->json(['success'=>'Row has been deleted']);
+    }
+
+    public function updateQuiz() {
+
     }
 }
