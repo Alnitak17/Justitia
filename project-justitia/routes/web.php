@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('/admin', [AdminController::class, 'show']);
 Route::get('/adminquiz', [AdminController::class, 'showQuiz']);
+// Route::delete('/adminquiz/{id}', [AdminController::class, 'deleteQuestion']);

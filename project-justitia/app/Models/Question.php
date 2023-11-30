@@ -14,7 +14,7 @@ class Question extends Model
      *
      * @var string
      */
-    protected $table = 'quizzes';
+    protected $table = 'questions';
 
     /**
      * The attributes that are mass assignable.
@@ -25,7 +25,8 @@ class Question extends Model
         'id',
         'title',
         'body',
-        'photo',
-        'quiz_id',
+        'photo'
     ];
+
+
 }

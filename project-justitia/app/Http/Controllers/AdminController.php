@@ -4,13 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Quiz;
 use App\Models\Question;
 use App\Models\Answer;
 
 class AdminController extends Controller
 {
-    public $quizzes = 0;
     public $questions = 0;
     public $answers = 0;
 
@@ -22,9 +20,6 @@ class AdminController extends Controller
 
     public function showQuiz() {
 
-        $quizzes = Quiz::where('id', '>=', 0)
-                    ->get();
-
         $questions = Question::where('id', '>=', 0)
                         ->orderby('id')
                         ->get();
@@ -33,27 +28,25 @@ class AdminController extends Controller
                         ->orderby('id')
                         ->get();
 
-        return view('adminquiz')->with('quizzes', $quizzes);
+        return view('adminquiz')->with('questions', $questions)->with('answers', $answers);
     }
 
-    public function createQuiz() {
+    public function deleteQuestion(Request $request) {
 
-        Quiz::create([
-            "name"=> $request->input('name')
+        $questionId = $request->input('question_id');
+
+        return response()->json(['message' => 'Success']);
+    }
+
+    public function createQuestion(request $request) {
+
+        Question::create([
+            "title" => $request->input('title'),
+            "body" => $request->input('body'),
+            "photo" => $request->input(null),
         ]);
 
-        return response()->json(['success'=>'Quiz created']);
-    }
-
-    public function deleteQuiz() {
-        $id;
-
-        $deleted = Quiz::where('id', '=', $id)->delete();
-
-        return response()->json(['success'=>'Row has been deleted']);
-    }
-
-    public function updateQuiz() {
 
     }
+
 }
