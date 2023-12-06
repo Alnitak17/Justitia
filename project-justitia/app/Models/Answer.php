@@ -23,7 +23,7 @@ class Answer extends Model
      */
     protected $fillable = [
         'id',
-        'quiz_id',
+        'question_id',
         'title',
         'body',
         'photo'

@@ -11,9 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-<p>test</p>
+
 <button type="button" id="modalbutton" class="btn btn-primary">Vraag toevoegen</button>
-{{ $questions }}
 <table class="table">
     <thead>
       <tr>
@@ -40,7 +39,7 @@
 </table>
 
 //Answers
-<button class="btn btn-primary">Antwoord toevoegen</button>
+<button type="button" id="answerModal" class="btn btn-primary">Antwoord toevoegen</button>
 <table class="table">
     <thead>
       <tr>
@@ -72,17 +71,67 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Vraag toevoegen</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form action="" method="post"></form>
+          <form action="{{url('/adminquiz')}}" method="post">
+            @csrf
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titel</label>
+                <input type="text" class="form-control" name="titleInput" placeholder="...">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Toevoeging</label>
+                <input type="text" class="form-control" name="bodyInput" placeholder="...">
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label">Foto (optioneel)</label>
+                <input class="form-control" type="file" name="fileInput">
+              </div>
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" >Sluiten</button>
+          <button type="submit" class="btn btn-primary">Vraag toevoegen</button>
         </div>
+    </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="answerForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Antwoord toevoegen</h5>
+          <button type="button" class="close"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{{url('/adminquiz/answer')}}" method="post">
+            @csrf
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Vraag</label>
+                <input type="text" class="form-control" name="questionidInput" placeholder="...">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titel</label>
+                <input type="text" class="form-control" name="titleInput" placeholder="...">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Toelichting (optioneel)</label>
+                <input class="form-control" type="text" name="bodyInput">
+              </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" >Sluiten</button>
+          <button type="submit" class="btn btn-primary">Vraag toevoegen</button>
+        </div>
+    </form>
       </div>
     </div>
   </div>
@@ -94,6 +143,9 @@ $("#modalbutton").on( "click", function() {
     $('#questionForm').modal('show');
 } );
 
+$("#answerModal").on( "click", function() {
+    $('#answerForm').modal('show');
+} );
 </script>
 
 </html>

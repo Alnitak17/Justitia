@@ -41,12 +41,23 @@ class AdminController extends Controller
     public function createQuestion(request $request) {
 
         Question::create([
-            "title" => $request->input('title'),
-            "body" => $request->input('body'),
-            "photo" => $request->input(null),
+            "title" => $request->input('titleInput'),
+            "body" => $request->input('bodyInput'),
+            "photo" => $request->input('fileInput')
         ]);
 
+        return redirect('adminquiz');
+    }
 
+    public function createAnswer(request $request) {
+
+        Answer::create([
+            "question_id" => 1,
+            "title" => $request->input('titleInput'),
+            "body" => $request->input('bodyInput')
+        ]);
+
+        return redirect('adminquiz');
     }
 
 }

@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Route::get('/admin', [AdminController::class, 'show']);
 Route::get('/adminquiz', [AdminController::class, 'showQuiz']);
+Route::post('/adminquiz', [AdminController::class, 'createQuestion']);
+Route::post('/adminquiz/answer', [AdminController::class, 'createAnswer']);
 // Route::delete('/adminquiz/{id}', [AdminController::class, 'deleteQuestion']);
