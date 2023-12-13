@@ -18,6 +18,7 @@ class AdminController extends Controller
         return view('admin');
     }
 
+    //load data to admin page
     public function showQuiz() {
 
         $questions = Question::where('id', '>=', 0)
@@ -31,13 +32,25 @@ class AdminController extends Controller
         return view('adminquiz')->with('questions', $questions)->with('answers', $answers);
     }
 
-    public function deleteQuestion(Request $request) {
+    public function deleteAnswer(Request $request) {
 
-        $questionId = $request->input('question_id');
+        $answer = $request->input('answer_id');
 
-        return response()->json(['message' => 'Success']);
+        Answer::where('id', $answer)->delete();
+
+        return redirect('/adminquiz');
     }
 
+    public function deleteQuestion(Request $request) {
+
+        $question = $request->input('question_id');
+
+        Question::where('id', $question)->delete();
+
+        return redirect('/adminquiz');
+    }
+
+    //create db rows via model
     public function createQuestion(request $request) {
 
         Question::create([
