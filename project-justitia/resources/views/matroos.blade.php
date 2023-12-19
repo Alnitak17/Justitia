@@ -15,8 +15,12 @@
       </nav>
     </header>
 <body>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Integer euismod, elit at fringilla sollicitudin, quam libero pretium tortor.</p>
+<p>Jij bent een matroos jouw taak is om je onschuld te bewijzen. 
+<br>  
+Na het beantwoorden van de vragen kom je erachter of je schuldig bent of niet. 
+<br>
+Maar geef niet teveel goede antwoorden anders word jij misschien als schuldige bestempelt.
+</p>
       <br>
       <br>
     <a href="{{ route('quizNav') }}">            

@@ -22,6 +22,7 @@
     <br>
     <br>
     <br>
+    <br>
     <button id="previous">Vorige vraag</button>
     <button id="next">Volgende vraag</button>
     <a href="/resultaat">

@@ -19,6 +19,7 @@ Route::controller(NavigatieController::class)->group(function () {
     Route::get('/resultaat', 'resultaat')->name('resultaatNav');
     Route::get('/sluiten', 'sluiten')->name('sluitenNav');
     Route::get('/credits', 'credits')->name('creditsNav');
+    Route::get('/foto', 'foto')->name('fotoNav');
 });
 
 

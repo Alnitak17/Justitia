@@ -32,4 +32,7 @@ class NavigatieController extends Controller
 
     public function credits()    
     {return view('credits');}
+
+    public function foto()    
+    {return view('foto');}
 }

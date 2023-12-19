@@ -19,9 +19,6 @@
       <p>Integer euismod, elit at fringilla sollicitudin, quam libero pretium tortor.</p>
       <br>
       <br>
-    <a href="{{ route('homeNav') }}">            
-    <button>Terug naar begin</button>
-    </a>
     <script src="{{asset('build/js/quiz.js') }}"></script>
     <footer class="footer">
       <p>Justitia</p>

@@ -15,12 +15,11 @@
       </nav>
     </header>
 <body>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Integer euismod, elit at fringilla sollicitudin, quam libero pretium tortor.</p>
-      <br>
-      <br>
-    <a href="{{ route('homeNav') }}">            
-    <button>Terug naar begin</button>
+<p>Met de knop hieronder ga je naar een foto overzicht met andere groepen die de quiz hebben gespeeld.
+<br>   
+</p>
+    <a href="{{ route('Nav') }}">            
+    <button>Foto's</button>
     </a>
     <script src="{{asset('build/js/quiz.js') }}"></script>
     <footer class="footer">

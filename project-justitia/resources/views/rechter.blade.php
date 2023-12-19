@@ -15,8 +15,10 @@
       </nav>
     </header>
 <body>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Integer euismod, elit at fringilla sollicitudin, quam libero pretium tortor.</p>
+<p>Jij bent een rechter, jouw taak is om de matrozen te veroordelen. 
+<br>  
+Ook kan je als rechter hints geven voor de quiz. 
+</p>
       <br>
       <br>
     <a href="{{ route('hintNav') }}">            

@@ -8,23 +8,24 @@
     </head>
     <header>
       <div class="curve">
-        <h1>Home</h1>
+        <h1>Justitia</h1>
         <h2></h2>
       </div>
       <nav class="more">
       </nav>
     </header>
 <body>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Integer euismod, elit at fringilla sollicitudin, quam libero pretium tortor.</p>
-      <br>
-      <br>
+<p>Deze multiplayer quizgame heeft 2 rollen. Per groep is er één rechter,
+<br>  
+dit is de leider. De rest van de spelers zijn matrozen.</p>
+      <div style="display: flex; flex-direction: column;">
     <a href="{{ route('matroosNav') }}">            
-    <button>Matroos</button>
+        <button>Matroos</button>
     </a>
     <a href="{{ route('rechterNav') }}">            
-    <button>Rechter</button>
+        <button>Rechter</button>
     </a>
+</div>
     <script src="{{asset('build/js/quiz.js') }}"></script>
     <footer class="footer">
       <p>Justitia</p>

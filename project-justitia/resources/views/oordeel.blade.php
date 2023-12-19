@@ -11,31 +11,23 @@
       <h1>Oordeel</h1>
     </div>
   </header>
-  
-  <nav class="more">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Integer euismod, elit at fringilla sollicitudin, quam libero pretium tortor.</p>
-      <br>
-      <br>
-      <form action="/submit" method="POST">
-        <label for="checkbox1">Checkbox 1</label>
-        <input type="checkbox" id="checkbox1" name="checkbox1">
-
-        <label for="checkbox2">Checkbox 2</label>
-        <input type="checkbox" id="checkbox2" name="checkbox2">
-
-        <br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <input type="submit" value="Submit">
-      </form>
-    </nav>
+  <p>Veroordeel nu de matrozen. 
+<br>
+De matrozen zijn schuldig wanneer:  
+<br>
+Ze tussen de 1-4 vragen of 8-10 vragen goed hebben.
+<br>
+Tussen de 5-7 vragen goed betekent onschuld.
+<br>
+<br>
+Voor de mensen die veroordeeld zijn is er een mogelijkheid om een foto te maken aan de schandpaal.
+<br>
+Deze mag je ook opsturen naar ons.
+</p>
   <br>
   <br>
-  <a href="{{ route('sluitenNav') }}">            
-    <button>Sluiten</button>
+  <a href="{{ route('fotoNav') }}">            
+    <button>Straf afhandelen</button>
   </a>
 
   <script src="{{asset('build/js/quiz.js') }}"></script>

@@ -14,7 +14,9 @@
     <nav class="more">
     </nav>
   </header>
-
+  <p>Hier staan de hints, als rechter mag je zelf bepalen hoeveel hints je geeft. 
+<br>   
+</p>
   <table>
     <thead>
       <tr>
