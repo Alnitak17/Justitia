@@ -42,4 +42,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+/**
+ * The table associated with the model.
+ *
+ * @var string
+ */
+protected $table = 'admins'; // add this line with your table name
 }
