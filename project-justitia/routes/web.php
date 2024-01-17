@@ -25,5 +25,3 @@ Route::post('/adminquiz/answer', [AdminController::class, 'createAnswer']);
 Route::post('/adminquiz/deleteAnswer', [AdminController::class, 'deleteAnswer']);
 Route::post('/adminquiz/deleteQuestion', [AdminController::class, 'deleteQuestion']);
 
-Route::get('/adminphotos', [PhotoController::class, 'show']);
-Route::post('/adminphotos', [PhotoController::class, 'addPhoto']);

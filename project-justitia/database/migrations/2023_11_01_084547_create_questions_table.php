@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('title');
             $table->string('body')->nullable();
             $table->string('photo')->nullable();
+            $table->string('answer1');
+            $table->string('answer2');
+            $table->string('answer3')->nullable();
+            $table->string('answer4')->nullable();
             $table->timestamps();
         });
     }
