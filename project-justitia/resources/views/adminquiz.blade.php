@@ -1,8 +1,7 @@
 @include('adminheader')
 
-
-<button type="button" id="modalbutton" class="btn btn-primary">Vraag toevoegen</button>
-<button type="button" id="importbutton" class="btn btn-primary">Importeren</button>
+<br>
+<button type="button" id="modalbutton" class="btn btn-primary mb-4">Vraag toevoegen</button>
 <table class="table">
     <thead>
       <tr>
@@ -37,8 +36,6 @@
         @endforeach
     </tbody>
 </table>
-
-//Answers
 
 
 
