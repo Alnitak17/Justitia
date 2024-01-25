@@ -25,7 +25,11 @@ class Question extends Model
         'id',
         'title',
         'body',
-        'photo'
+        'photo',
+        'answer1',
+        'answer2',
+        'answer3',
+        'answer4'
     ];
 
 
